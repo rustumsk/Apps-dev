@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ConsoleApp1
 {
@@ -8,7 +8,6 @@ namespace ConsoleApp1
         private string vehType;
         private string brand;
         private DateTime parkIn;
-        //private DateTime parkOut = DateTime.Now.AddHours(16);
 
         public Parking(string plateNum, string vehType, string brand, DateTime parkIn)
         {
@@ -23,13 +22,7 @@ namespace ConsoleApp1
             Console.WriteLine("Date/Time In:" + parkIn + "\n         Out:" + parkOut);
 
             TimeSpan duration = parkOut - parkIn;
-            /*double seconds = timeDifference.TotalSeconds;
 
-            int minute = (int)seconds / 60;
-
-            int hours = minute / 60;
-            
-            int day = 0;*/
             double hour = 0;
             int day = 0;
             int year = parkOut.Year - parkIn.Year;
@@ -51,7 +44,6 @@ namespace ConsoleApp1
                 Console.WriteLine("Parking Time: " + duration.Hours.ToString("0.00") + " Hour/s");
             }
             hour = duration.TotalHours;
-            Console.WriteLine(duration.Hours);
             double amount = flagDown;
             double totalAmount = 0;
 
